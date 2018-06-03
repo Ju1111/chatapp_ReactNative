@@ -1,11 +1,14 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import SignUp from './screens/SignUp';
+import styles from './App.styles';
 
-export default class App extends React.Component {
+export default class ChatApp extends React.Component {
   render() {
     return (
-      <SignUp />
+      <View style={styles.container}>
+        <SignUp />
+      </View>
     );
   }
 }

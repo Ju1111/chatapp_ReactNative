@@ -11,5 +11,21 @@ export default StyleSheet.create({
     fontSize: 30,
     alignSelf: 'center',
     marginBottom: 30
-  }
+  },
+  buttonText: {
+    fontSize: 18,
+    color: 'white',
+    alignSelf: 'center'
+  },
+  button: {
+    height: 36,
+    backgroundColor: '#66b3ff',
+    borderColor: '#66b3ff',
+    borderWidth: 1,
+    borderRadius: 8,
+    marginTop: 20,
+    marginBottom: 10,
+    alignSelf: 'stretch',
+    justifyContent: 'center'
+  },
 });
