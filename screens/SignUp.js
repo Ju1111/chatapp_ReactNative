@@ -24,21 +24,25 @@ export default class SignUp extends Component {
     const Form = t.form.Form;
 
     return (
-      <View style={ styles.container }>
-        <Text style={ styles.title }>Sign up for Julias happy ChatApp</Text>
+      <View style={styles.outerContainer}>
+        <KeyboardAvoidingView
+          behavior="padding"
+          style={styles.container}>
+          <Text style={ styles.title }>Sign up for Julias happy ChatApp</Text>
 
-        <Form
-          ref="form"
-          type={ Person }
-          options={ formOptions } />
+          <Form
+            ref="form"
+            type={ Person }
+            options={ formOptions } />
 
-        <TouchableHighlight
-          style={ styles.button }
-          onPress={ this.onSubmit }
-          underlayColor='#99d9f4'
-        >
-          <Text style={ styles.buttonText }>Sign up</Text>
-        </TouchableHighlight>
+          <TouchableHighlight
+            style={ styles.button }
+            onPress={ this.onSubmit }
+            underlayColor='#99d9f4'
+          >
+            <Text style={ styles.buttonText }>Sign up</Text>
+          </TouchableHighlight>
+        </KeyboardAvoidingView>
       </View>
     );
   }
