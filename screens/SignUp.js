@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableHighlight, KeyboardAvoidingView } from 'react-native';
 import t from 'tcomb-form-native';
 import Person, { formOptions } from '../models/Person';
+import signUp from '../actions/users/sign-up';
 
 import styles from './SignUp.styles';
 
@@ -33,6 +34,7 @@ export default class SignUp extends Component {
     const { form } = this.refs;
     const newUser = form.getValue();
     if (!newUser) return;
+    signUp(newUser);
     console.log(newUser);
     this.clearForm();
   }
