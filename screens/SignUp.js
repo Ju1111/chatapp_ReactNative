@@ -10,7 +10,23 @@ export default class SignUp extends Component {
   constructor(props) {
     super(props);
 
+    this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+
+    this.state = { newUser: null };
+  }
+
+  componentDidMount() {
+    // focus on the "name" field
+    this.refs.form.getComponent('name').refs.input.focus();
+  }
+
+  clearForm() {
+    this.setState({ newUser: null });
+  }
+
+  onChange(newUser) {
+    this.setState({ newUser });
   }
 
   onSubmit() {
@@ -18,22 +34,25 @@ export default class SignUp extends Component {
     const newUser = form.getValue();
     if (!newUser) return;
     console.log(newUser);
+    this.clearForm();
   }
 
   render() {
     const Form = t.form.Form;
 
     return (
-      <View style={styles.outerContainer}>
+      <View style={ styles.outerContainer }>
         <KeyboardAvoidingView
           behavior="padding"
-          style={styles.container}>
+          style={ styles.container }>
           <Text style={ styles.title }>Sign up for Julias happy ChatApp</Text>
 
           <Form
             ref="form"
             type={ Person }
-            options={ formOptions } />
+            options={ formOptions }
+            value={ this.state.newUser }
+            onChange={ this.onChange } />
 
           <TouchableHighlight
             style={ styles.button }
