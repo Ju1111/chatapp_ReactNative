@@ -3,10 +3,10 @@ import { View, Text, TouchableHighlight, KeyboardAvoidingView } from 'react-nati
 import t from 'tcomb-form-native';
 import Person, { formOptions } from '../models/Person';
 import signUp from '../actions/users/sign-up';
-
+import { connect } from 'react-redux';
 import styles from './SignUp.styles';
 
-export default class SignUp extends Component {
+class SignUp extends Component {
 
   constructor(props) {
     super(props);
@@ -34,7 +34,7 @@ export default class SignUp extends Component {
     const { form } = this.refs;
     const newUser = form.getValue();
     if (!newUser) return;
-    signUp(newUser);
+    this.props.signUp(newUser);
     console.log(newUser);
     this.clearForm();
   }
@@ -68,3 +68,7 @@ export default class SignUp extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ loading }) => ({ loading });
+
+export default connect(mapStateToProps, { signUp })(SignUp);
