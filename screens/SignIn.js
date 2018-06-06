@@ -12,7 +12,7 @@ import t from 'tcomb-form-native';
 import User, { formOptions } from '../models/User';
 import loadUser from '../actions/users/load';
 import signIn from '../actions/users/sign-in';
-import styles from './SignIn.styles';
+import styles from './SignUp.styles';
 
 class SignIn extends Component {
   constructor(props) {
