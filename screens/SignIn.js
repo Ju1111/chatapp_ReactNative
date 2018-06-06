@@ -50,36 +50,36 @@ class SignIn extends Component {
     const { user, loading } = this.props;
 
     return (
-      <View style={styles.outerContainer}>
+      <View style={ styles.outerContainer }>
         <KeyboardAvoidingView
           behavior="padding"
-          style={styles.container}>
-          <Text style={styles.title}>Sign into Julias happy ChatApp</Text>
-          { user && user.error ? <Text style={styles.error}>{user.error.name} { user.error.message }</Text> : null }
+          style={ styles.container }>
+          <Text style={ styles.title }>Sign into Julias happy ChatApp</Text>
+          { user && user.error ? <Text style={ styles.error }>{ user.error.name } { user.error.message }</Text> : null }
 
           <Form
             ref="form"
-            type={User}
-            options={formOptions}
-            value={this.state.user}
-            onChange={this.onChange} />
+            type={ User }
+            options={ formOptions }
+            value={ this.state.user }
+            onChange={ this.onChange } />
 
             <TouchableHighlight
-              disabled={loading}
-              style={styles.buttonPrimary}
-              onPress={this.onSubmit}
+              disabled={ loading }
+              style={ styles.buttonPrimary }
+              onPress={ this.onSubmit }
               underlayColor='#99d9f4'
             >
-              <Text style={styles.buttonText}>Sign in</Text>
+              <Text style={ styles.buttonText }>Sign in</Text>
             </TouchableHighlight>
 
             <TouchableHighlight
-              disabled={loading}
-              style={styles.buttonSecondary}
-              onPress={Actions.signUp}
+              disabled={ loading }
+              style={ styles.buttonSecondary }
+              onPress={ Actions.signUp }
               underlayColor='#99d9f4'
             >
-              <Text style={styles.buttonText}>Sign up</Text>
+              <Text style={ styles.buttonText }>Sign up</Text>
             </TouchableHighlight>
         </KeyboardAvoidingView>
       </View>

@@ -40,7 +40,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     marginTop: 20,
-    marginBottom: 15,
+    marginBottom: 10,
     alignSelf: 'stretch',
     justifyContent: 'center'
   },
@@ -50,6 +50,7 @@ export default StyleSheet.create({
     borderColor: '#75d8ff',
     borderWidth: 1,
     borderRadius: 8,
+    marginTop: 5,
     marginBottom: 15,
     alignSelf: 'stretch',
     justifyContent: 'center'
