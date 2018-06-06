@@ -12,7 +12,7 @@ import t from 'tcomb-form-native';
 import User, { formOptions } from '../models/User';
 import loadUser from '../actions/users/load';
 import signIn from '../actions/users/sign-in';
-import styles from './SignUp.styles';
+import styles from './SignIn.styles';
 
 class SignIn extends Component {
   constructor(props) {
@@ -54,7 +54,7 @@ class SignIn extends Component {
         <KeyboardAvoidingView
           behavior="padding"
           style={styles.container}>
-          <Text style={styles.title}>Sign into ShatApp</Text>
+          <Text style={styles.title}>Sign into Julias happy ChatApp</Text>
           { user && user.error ? <Text style={styles.error}>{user.error.name} { user.error.message }</Text> : null }
 
           <Form
