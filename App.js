@@ -12,11 +12,12 @@ export default class ChatApp extends React.Component {
   render() {
     return (
       <Provider store={ store }>
-        <View style={styles.container}>
+        <View style={ styles.container }>
           <Router>
             <Scene key="root">
               <Scene key="signIn" component={ SignIn } title="Sign In" initial={ true } />
               <Scene key="signUp" component={ SignUp } title="Sign Up" />
+              <Scene key="chatRoom" component={ ChatRoom } title="Chat Room" />
             </Scene>
           </Router>
         </View>
