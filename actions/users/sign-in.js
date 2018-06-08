@@ -5,7 +5,6 @@ import {
   API_READY,
   API_ERROR,
 } from '../../middleware/api'
-import { NavigationActions } from 'react-navigation'
 import { Actions } from 'react-native-router-flux';
 
 export const USER_SIGNED_IN = 'USER_SIGNED_IN';
